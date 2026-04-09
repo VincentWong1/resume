@@ -49,7 +49,10 @@
 \textbf{EBM饿了么B端垂域通用大模型研发}\ {\small\textcolor{gray}{\ 202405-202501,\ 负责人}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 基于LLM的工作台算法能力升级探索
+  \item xx
+  \item xx
+  \item xx
+  \item xx
 \end{itemize}
 \end{onehalfspacing}
 
@@ -77,35 +80,39 @@
 \vspace{0.3em}
 % \noindent\rule{\textwidth}{0.4pt}
 % \vspace{0.3em}
-
 \begin{graybox}
 \datedline{\role{淘天集团-客户满意中心-智能研发-人机协同}{高级应用算法专家} {\small\textcolor{gray}{带XP工作台小组3-5人}}}{2021年3月 -- 2022年6月}
 
 \vspace{0.5em}
 \textbf{智能XP工作台专项}\ {\small\textcolor{gray}{\ 202202-202307,\ 算法负责人}}
+
+\vspace{0.3em}
+\textit{基于LLM的工作台算法能力升级探索}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item \textbf{基于LLM的工作台算法能力升级探索}
-  \begin{itemize}
-    \item 参与手淘团队合作共建通用大模型，客满提供客服领域数据+标注通用域数据，基于 AOP 平台实现领域 SFT。落地场景包括：小蜜 FAQ 问答、自营小蜜商品售前问答、客满技术质检 NLU 场景、客服工作台对话引导。
-    \item 主导质检 NLU 问题增强的领域测评（ChatGLM-6B + SFT）：在标准模糊的复杂语义场景（如服务推诿）中表现优于传统 PLM；在小蜜大促FAQ/商知问答场景，通过检索增强+外部知识 Prompt 引入，利用大模型语义理解生成高质量回复。
-    \item 参与基于 ChatGLM-6B 在2w条客服域数据上的 continue-train，已具备基于 context、会员进线状态的对话理解和回复能力。
-  \end{itemize}
-  \item \textbf{智能质检}
-  \begin{itemize}
-    \item 整合CCO全部"服务一致性"质检算法，主导服务态度、问题定位、问题解决3部分的原离线算法改造为事中干预，实现实时拦截与智能化辅助能力提升。
-    \item 主推"智能升级"和"转离完结自动化"两套辅助能力。其中"智能升级"通过算法识别高风险场景，自动生成升级工单；"转离完结自动化"通过算法识别承诺并创建待办，监督履约情况
-    \item "智能升级"项目针对0/1分布失衡的小样本学习场景，采用 RoBERTa Distiller+soft-label 混合模式，覆盖8个二三级风险场景，单场景打标仅需200-500条；"转离完结自动化"部分通过 ELECTRA fine-tune+DualCL 算法增强承诺句特征表达差异（Precision 0.93），并尝试 PET 算法提升场景覆盖（5场景平均准确率0.83）。
-  \end{itemize}
+  \item 参与手淘团队合作共建通用大模型，客满提供客服领域数据+标注通用域数据，基于 AOP 平台实现领域 SFT。落地场景包括：小蜜 FAQ 问答、自营小蜜商品售前问答、客满技术质检 NLU 场景、客服工作台对话引导
+  \item 主导质检 NLU 问题增强的领域测评（ChatGLM-6B + SFT）：在标准模糊的复杂语义场景（如服务推诿）中表现优于传统 PLM；在小蜜大促FAQ/商知问答场景，通过检索增强+外部知识 Prompt 引入，利用大模型语义理解生成高质量回复
+  \item 参与基于 ChatGLM-6B 在2w条客服域数据上的 continue-train，已具备基于 context、会员进线状态的对话理解和回复能力
+\end{itemize}
+\end{onehalfspacing}
+
+\vspace{0.3em}
+\textit{智能质检}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 整合CCO全部"服务一致性"质检算法，主导服务态度、问题定位、问题解决3部分的原离线算法改造为事中干预，实现实时拦截与智能化辅助能力提升
+  \item 主推"智能升级"和"转离完结自动化"两套辅助能力。其中"智能升级"通过算法识别高风险场景，自动生成升级工单；"转离完结自动化"通过算法识别承诺并创建待办，监督履约情况
+  \item "智能升级"项目针对0/1分布失衡的小样本学习场景，采用 RoBERTa Distiller+soft-label 混合模式，覆盖8个二三级风险场景，单场景打标仅需200-500条；"转离完结自动化"部分通过 ELECTRA fine-tune+DualCL 算法增强承诺句特征表达差异（Precision 0.93），并尝试 PET 算法提升场景覆盖（5场景平均准确率0.83）
 \end{itemize}
 \end{onehalfspacing}
 
 \vspace{0.3em}
 \textbf{主动服务专项}\ {\small\textcolor{gray}{\ 202103-202201,\ 算法负责人}}
-\begin{onehalfspacing}\begin{itemize}
-  \item 建立分人群、分场域的服务卡点识别能力；通过服务权益的uplift预测和流失预警，匹配补偿动作；最终通过**智能触达机器人（Agent）**实现有心智的主动服务触达。
-  \item 承担智能触达机器人开发，实现特定业务场景下的FSM智能外呼（日均外呼200，会话完成率64\%）；算法部分 BERT+ine-tune 做意图分类，并在 FSM 基础上引入QQ-Bot（基于 DSSM 的 Query-Question Match，ACC@1 0.87），补充领域 FAQ 响应能力。
-  \item 对历史服务语聊中的频繁对话序列挖掘，用于降低对话流生成难度；尝试基于TSBC架构的无流程指引对话能力（未上线）。
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 建立分人群、分场域的服务卡点识别能力；通过服务权益的uplift预测和流失预警，匹配补偿动作；最终通过\textbf{智能触达机器人（Agent）}实现有心智的主动服务触达
+  \item 承担智能触达机器人开发，实现特定业务场景下的FSM智能外呼（日均外呼200，会话完成率64\%）；算法部分 BERT+fine-tune 做意图分类，并在 FSM 基础上引入QQ-Bot（基于 DSSM 的 Query-Question Match，ACC@1 0.87），补充领域 FAQ 响应能力
+  \item 对历史服务语聊中的频繁对话序列挖掘，用于降低对话流生成难度；尝试基于TSBC架构的无流程指引对话能力（未上线）
 \end{itemize}
 \end{onehalfspacing}
 \end{graybox}
@@ -114,27 +121,20 @@
 \noindent\rule{\textwidth}{0.4pt}
 \vspace{0.5em}
 
-\datedsubsection{\textbf{苏宁金融/星图金融}\ 南京}{2016年7月 -- 2021年2月}
+\datedsubsection{\textbf{苏宁金融}\ 南京}{2016年7月 -- 2021年2月}
 
 \begin{graybox}
 \datedline{\role{苏宁金融科技事业部-智能营销产品中心-算法研发部}{经理} {\small\textcolor{gray}{带南京10人，上海3人}}}{2016年7月 -- 2021年2月}
 
 \vspace{0.5em}
-\textbf{智能营销产品中心}\ {\small\textcolor{gray}{\ 202202-202307,\ 经理}}
+\textbf{智能营销产品中心}\ {\small\textcolor{gray}{\ 201901-202307,\ 经理}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item \textbf{CRM自动行业画像实时计算功能开发}
-  \begin{itemize}
-    \item CRM实时计算：基于 Spark Streaming 开发用户画像实时分析模块，结合 Randomized Lasso 特征筛选，提供通用分析能力对外输出。
-  \end{itemize}
-  \item \textbf{首页理财活动CTR预测}
-  \begin{itemize}
-    \item 多渠道特征融合的推荐算法，利用 PCA 降维+稠密化处理，完成基于GBDT+LR的二分类预测模型。
-  \end{itemize}
-  \item \textbf{苏宁金融"营销分"体系建设}
-  \begin{itemize}
-    \item 基于 XGBoost/Light GBM自动化模型训练，通过 Platt Scaling 实现多模型融合校准，完成客群全覆盖。
-  \end{itemize}
+  \item \textbf{CRM自动行业画像实时计算功能开发}：基于 Spark Streaming 开发用户画像实时分析模块，结合 Randomized Lasso 特征筛选，提供通用分析能力对外输出
+  
+  \item \textbf{首页理财活动CTR预测}：多渠道特征融合的推荐算法，利用 PCA 降维+稠密化处理，完成基于 GBDT+LR 的二分类预测模型
+  
+  \item \textbf{苏宁金融“营销分”体系建设}：基于 XGBoost/LightGBM 自动化模型训练，通过 Platt Scaling 实现多模型融合校准，完成客群全覆盖
 \end{itemize}
 \end{onehalfspacing}
 
@@ -142,41 +142,23 @@
 \textbf{智能客服项目组}\ {\small\textcolor{gray}{\ 201901-202006,\ 算法专家}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item \textbf{客服机器人开发}
-  \begin{itemize}
-    \item 负责框架设计、意图识别（对比 fastText/CNN/BiLSTM，最终采用 fastText，macro precision 87.5\%）、相似问匹配（WMD+Levenshtein 距离），完成镜像打包商业输出。
-  \end{itemize}
-  \item \textbf{催收机器人开发}
-  \begin{itemize}
-    \item 设计基于FSM的问答转移机制+slotfilling 动态加载，配合 TTS 实现智能语音催收；改造意图模块为分类粒度逐层收缩的漏斗模式（19个意图，macro precision 91.9\%）。
-  \end{itemize}
-  \item \textbf{质检机器人开发}
-  \begin{itemize}
-    \item 基于flask独立开发，设计分级质检结构，通过离线训练的 Character-level TextCNN 判断高危词语境含义（召回率92\%，多义高危词F1 0.70）。
-  \end{itemize}
-  \item \textbf{营销机器人开发}
-  \begin{itemize}
-    \item 基于LLM的客服智能质检系统，提升质检效率和准确率
-  \end{itemize}
+  \item \textbf{客服机器人开发}：负责框架设计、意图识别（对比 fastText/CNN/BiLSTM，最终采用 fastText，macro precision 87.5\%）、相似问匹配（WMD+Levenshtein 距离），完成镜像打包商业输出
+  
+  \item \textbf{催收机器人开发}：设计基于 FSM 的问答转移机制+slotfilling 动态加载，配合 TTS 实现智能语音催收；改造意图模块为分类粒度逐层收缩的漏斗模式（19个意图，macro precision 91.9\%）
+  
+  \item \textbf{质检机器人开发}：基于 Flask 独立开发，设计分级质检结构，通过离线训练的 Character-level TextCNN 判断高危词语境含义（召回率 92\%，多义高危词 F1 0.70）
+  
+  \item \textbf{营销机器人开发}：设计场景可扩展配置框架，对接 IVR 语音平台；基于 bert-serving-server 搭建 BERT 词向量服务，实现 ASR 语音向量化意图匹配
 \end{itemize}
 \end{onehalfspacing}
 
 \vspace{0.3em}
-\textbf{智能投顾项⽬组}\ {\small\textcolor{gray}{\ 201607-201812,\ 算法高级工程师}}
+\textbf{智能投顾项目组}\ {\small\textcolor{gray}{\ 201607-201812,\ 算法高级工程师}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item \textbf{"苏宁智投"产品的底层算法开发}
-  \begin{itemize}
-    \item 感知客服工作台的用户输入，提供智能提示和建议
-  \end{itemize}
-  \item \textbf{基金综合诊断功能开发}
-  \begin{itemize}
-    \item 基于LLM的客服智能质检系统，提升质检效率和准确率
-  \end{itemize}
-  \item \textbf{智能营销产品推荐算法开发}
-  \begin{itemize}
-    \item 基于LLM的客服智能质检系统，提升质检效率和准确率
-  \end{itemize}
+  \item \textbf{“苏宁智投”产品的底层算法开发}：合作开发"苏宁智投"产品，负责基金风险收益计算、基金池筛选及资产归类模块；协作完成基于遗传算法的均值-方差最优化计算模块（年化收益率 7.19-19.84\%）
+  
+  \item \textbf{智能营销产品推荐算法开发}：特定业务场景下的 LR+评分卡营销模型开发（R），共建"基于逻辑回归的评分卡建模"标准流程
 \end{itemize}
 \end{onehalfspacing}
 \end{graybox}
@@ -191,19 +173,47 @@
 \section{\faCogs\ IT 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: C == Python > C++ > Java
-  \item 平台: Linux
-  \item 开发: xxx
+  \item 编程语言: Python == SQL > Shell > R
+  \item 平台: MacOS, Linux
+  \item 开发: PyTorch, TensorFlow, Spark, Hadoop, Hive, Redis, ES, HBase, MySQL
+  \item AI工具/框架：Claude Code, OpenClaw, DeepAgents, DSPy, Langfuse/LangSmith, DeepEval, XAgent etc.
+  \item 训练框架：TuningFactory(/LlamaFactory), ROLL
+  \item 算法: 强化学习（PPO/GRPO/DAPO), 监督微调（Full-Finetuning/LoRA), 对齐（RLHF/DPO），深度学习（CNN/RNN/transformer), 经典机器学习（XGBoost/LightGBM/SVM)
 \end{itemize}
 
-\section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-\datedline{其他奖项}{2015}
+\section{\faHeartO\ 奖项作品}
+\textbf{论文}
+\begin{itemize}[parsep=0.3ex]
+  \item \textit{ICML 2026 Conference 在投}, Towards Autonomous Business Intelligence via Data-to-Insight Discovery Agent \hfill 2026
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{专利}
+\begin{itemize}[parsep=0.3ex]
+  \item \textbf{CXTA177467} - 一种数据样本的生成方法、问答方法和电子设备 \hfill 12/2025 \\
+  {\small\textcolor{gray}{（基于多智能体对抗的垂域数据合成）}}
+  
+  \item \textbf{CXTA177008} - 问答数据生成方法、问答方法、计算机设备和存储介质 \hfill 12/2025 \\
+  {\small\textcolor{gray}{（基于跨文档知识图谱的领域推理问生产）}}
+  
+  \item \textbf{CXTA151576} - 任务型对话方法、存储介质及计算机设备 \hfill 06/2024 \\
+  {\small\textcolor{gray}{（E-Agent：兼顾速度、准确性、稳定性、和易于改进的智能助手方案）}}
+  
+  \item \textbf{CXTA115006} - 待办任务创建、履约动作分类模型构建方法、电子设备 \hfill 03/2023 \\
+  {\small\textcolor{gray}{（客服领域中基于自然语言识别的承诺待办系统及其算法和流程）}}
+
+  \item \textbf{CN114374770A} - ⼀种语⾳质检⽅法、装置、计算机设备及存储介质 \hfill 04/2021
+  \item \textbf{CN114333813A} - 可配置智能语⾳机器⼈的实现⽅法、装置和存储介质 \hfill 04/2021
+  \item \textbf{CN111898377A} - ⼀种情感识别⽅法、装置、计算机设备及存储介质 \hfill 07/2020
+  \item \textbf{CN112036906A} - ⼀种数据处理⽅法、装置、设备 \hfill 07/2020
+  \item \textbf{CN110298759A} - ⼀种基⾦诊断⽅法、装置及计算机可读存储介质 \hfill 2019
+\end{itemize}
 
 \section{\faInfo\ 其他}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 语言: 英语 - 熟练(TOEFL xxx)
+  \item 语言: IELTS (6.5), TOEFL (93), GRE (Quantitative:170), 中级⼝译, CET6
+  \item 管理: PMP 证书
 \end{itemize}
 
 %% Reference
