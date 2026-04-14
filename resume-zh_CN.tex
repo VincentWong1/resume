@@ -46,18 +46,20 @@
 \begin{graybox}
 \datedline{\role{中国电商事业群-淘宝闪购-技术中心-供给技术部}{高级应用算法专家} {\small\textcolor{gray}{虚线带算法团队10-15人}}}{2023年8月 -- 至今}
 
-{\large\textbf{Agent-0：在闪购商家营销活动配置场景的autoHarness实践}}\ {\small\textcolor{gray}{\hfill 202502-至今,\ 项目负责人}}
+\vspace{0.5em}
+\noindent{\color{gray!40}\rule{\textwidth}{0.2pt}}
+\textbf{Agent-0：在闪购商家营销活动配置场景的autoHarness实践}\ {\small\textcolor{gray}{\hfill 202502-至今,\ 项目负责人}}
 
 \vspace{0.3em}
-\textbf{项目背景与定位}
+{\small\textbf{项目背景与定位}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 主导"外卖 B 端营销活动推荐与配置"场景的端到端落地，设计并推动 Harness-Model 一体化微调方案的工程落地，面向闪购商家营销活动配置的全链路智能化目标。
+  \item 主导“外卖 B 端营销活动推荐与配置”场景的端到端落地，设计并推动 Harness-Model 一体化微调方案的工程落地，实现面向最终业务结果的端智能体开发模式。
 \end{itemize}
 \end{onehalfspacing}
 
 \vspace{0.3em}
-\textbf{技术架构设计}
+{\small\textbf{技术架构设计}}
 \begin{onehalfspacing}
 \begin{itemize}
   \item \textbf{Harness Engineering 层}：设计 DeepAgents + DSPy 混合架构，以 DeepAgents 开源框架完成单场景 Agent 原型的快速搭建与验证，随后接入 DSPy 框架引入 Self-Verification 驱动机制，实现 Harness 节点的自优化闭环迭代——以数据驱动的自优化范式取代传统依赖人工经验的手工方式；
@@ -66,62 +68,58 @@
 \end{onehalfspacing}
 
 \vspace{0.5em}
-\noindent{\color{gray}\rule{\textwidth}{0.1pt}}
-\vspace{0.5em}
-
-{\large\textbf{EBM饿了么B端垂域通用大模型研发}}\ {\small\textcolor{gray}{\ 202405-202501,\ 负责人}}
+\noindent{\color{gray!40}\rule{\textwidth}{0.2pt}}
+\textbf{EBM饿了么B端垂域通用大模型研发}\ {\small\textcolor{gray}{\hfill 202405-202501,\ 负责人}}
 
 \vspace{0.3em}
-\textbf{项目背景与定位}
+{\small\textbf{项目背景与定位}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 基于饿了么 B 端垂域知识和方法论的文本分布偏置，探索qwen系列小尺寸模型在饿了么 B 端垂域业务场景下的高效、准确应用，为端到端的 agent 应用提垂域预训练基础。
+  \item 基于饿了么 B 端垂域知识和方法论的文本分布偏置，探索qwen系列小尺寸模型在饿了么 B 端垂域业务场景下的高效、准确应用，为端到端的 agent 应用提供垂域知识基础。
 \end{itemize}
 \end{onehalfspacing}
 
 \vspace{0.3em}
-\textbf{核心贡献}
+{\small\textbf{核心贡献}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item \textbf{主导了 EBM 系列模型全周期研发与规模化落地}：基于 MCTS 理论框架，认为垂域解空间的有效搜索依赖对垂域数据分布的充分拟合，因此主导完成了 EBM-R1（垂域推理）、EBM-R1-MoE（混合架构推理）、EBM-R1-$\pi$（内化 Python 解题的 PAL 模型）、EBM-Instruct-MoE（蒸馏+垂域偏好对齐）四个模型版本的研发。线上覆盖 B 端 85\% token 量（约 420 亿 token），较调用百炼 DeepSeek-R1 日均节约成本 2.7 万元；垂域知识 +7.97\%、推理 +11.60\%、指令 +3.33\%，而通用能力仅推理指标出现有限衰退 -3.32\%;Think-model 平均 token 长度较基座下降 27\%，以有限的推理效果成本换取了效率的大幅提升；
+  \item \textbf{主导了 EBM 系列模型全周期研发与规模化落地}：基于 MCTS 理论框架，认为垂域解空间的有效搜索依赖对垂域数据分布的充分拟合，因此主导完成了 EBM-R1（垂域推理）、EBM-R1-MoE（混合架构推理）、EBM-R1-$\pi$（内化 Python 解题的 PAL 模型）、EBM-Instruct-MoE（蒸馏+垂域偏好对齐）四个模型版本的研发。线上覆盖 B 端 85\% token 量（约 420 亿 token），较调用百炼 DeepSeek-R1 日均节约成本 2.7 万元；垂域知识 +7.97\%、推理 +11.60\%、指令 +3.33\%，而通用能力仅推理指标出现有限衰退 -3.32\%;Think-model 平均 token 长度较基座下降 27\%，以有限的效果成本换取了大幅的效率提升；
   \item \textbf{设计并建立了垂域大模型训练流程与发布规范}：系统构建 Pre-training（CPT + MID）与 Post-training（SFT + RFT + RL）Pipeline，确立从多任务离线数据生产 $\rightarrow$ 在线大规模并行训练（星云 MDL）$\rightarrow$ 在线规模化测评（阿里 OpenLM）的标准化研发流程；
-  \item \textbf{主导大模型全栈基建开发}：设计 Dual-Agent 对抗生成框架用于垂域复杂推理数据生产；建设 E-LLM-Eval 测评体系，采用"垂域/通用 $\times$ 知识/推理/指令 $\times$ 餐饮/零售/其他"多级多维结构，兼顾通用与垂域表现；
-  \item \textbf{训练策略优化}：SFT 阶段基于 MoDS 方法原型以 ，用 CrossEntropy 排序代替 Greedy Selection，实现线上应用数据的自动化过滤回流（相较随机采样，垂域推理 +2.55pt、指令 +1.79pt、安全 +2.50pt）；RL 阶段设计"在/离线拒绝采样+难题回流"机制，提升学习效率并保障难题探索能力。
+  \item \textbf{主导大模型全栈基建开发}：设计 Dual-Agent 对抗生成框架用于垂域复杂推理数据的生产；建设 E-LLM-Eval 测评体系，采用"垂域/通用 $\times$ 知识/推理/指令 $\times$ 餐饮/零售/其他"多级多维结构，兼顾通用与垂域表现；
+  \item \textbf{训练策略优化}：SFT 阶段基于 MoDS 方法原型，用 CrossEntropy 排序代替原 Greedy Selection，实现线上应用数据的自动化过滤回流（相较随机采样，垂域推理 +2.55pt、指令 +1.79pt、安全 +2.50pt）；RL 阶段设计了“在/离线拒绝采样+难题回流”机制，提升了学习效率的同时保障了难题探索能力。
 \end{itemize}
 \end{onehalfspacing}
 
 \vspace{0.5em}
-\noindent{\color{gray}\rule{\textwidth}{0.1pt}}
-\vspace{0.5em}
-
-{\large\textbf{EBM-AIDA: 饿了么B端自动化数据洞察智能体}}\ {\small\textcolor{gray}{\hfill 202405-202412,\ 技术方案设计}}
+\noindent{\color{gray!40}\rule{\textwidth}{0.2pt}}
+\textbf{EBM-AIDA: 饿了么B端自动化数据洞察智能体}\ {\small\textcolor{gray}{\hfill 202405-202412,\ 技术方案设计}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 负责了基于 trajectory 过程奖励实现方案的设计和理论验证：提出了店铺数据分析场景下的“元思考范式”，定义了典型 insight 类型（例如 $\langle$EVALUATION$\rangle$、$\langle$DATA\_COMFIRMATION$\rangle$、$\langle$HYPOTHESIS\_TESTING$\rangle$ etc.），并将原本无度扩展的 long-runing steps 抽象为 HMM 形式的 state-machine，将每轮推理维持在较稳定的 context span，并基于 Pareto 原则，仅提取每轮的主因，以提升解空间的搜索效率；设计了即时奖励 和 累计奖励的混合模式，平衡短期和长期动作的引导。测评显示，累计25步时，AIDA 相比 ReAct Agent，有效子结论数提升8.42个，数值幻觉数下降24.13个，指标下钻深度平均提升2.67轮；并落地“B端城市经营”场景。
+  \item 负责了 Agent Trajectory 过程奖励实现的方案设计和理论验证：设计了店铺数据分析场景下的“元思考范式”，定义其中典型的 insight 类型（例如 $\langle$EVALUATION$\rangle$、$\langle$DATA\_COMFIRMATION$\rangle$、$\langle$HYPOTHESIS\_TESTING$\rangle$ etc.）。
+  \item 将原本无度扩展的 long-running steps 抽象为 HMM 形式的 state-machine，将每轮推理维持在较稳定的 context span；基于 Pareto 原则，仅提取每轮主因，以提升解空间的搜索效率；设计了即时奖励 和 累计奖励的混合模式，平衡短期和长期动作的引导。
+  \item 测评显示，累计25步时，AIDA 相比 ReAct Agent，有效子结论数提升8.42个，数值幻觉数下降24.13个，指标下钻深度平均提升2.67轮。近期落地“B端城市经营”业务场景。
 \end{itemize}
 \end{onehalfspacing}
 
 \vspace{0.5em}
-\noindent{\color{gray}\rule{\textwidth}{0.1pt}}
-\vspace{0.5em}
-
-{\large\textbf{饿了么商家助手}}\ {\small\textcolor{gray}{\hfill 202308-202404,\ 算法负责人}}
+\noindent{\color{gray!40}\rule{\textwidth}{0.2pt}}
+\textbf{饿了么商家助手}\ {\small\textcolor{gray}{\hfill 202308-202404,\ 算法负责人}}
 
 \vspace{0.3em}
-\textbf{项目背景与定位}
+{\small\textbf{项目背景与定位}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 2023 年 9 月，与工程团队联合孵化饿了么 B 端首个智能体产品，在行业早期探索以端到端 Agent 助理替代传统 Chatbot 的产品形态。至今已覆盖零售、品牌、城代、官代等业务线 50+ 场景，月活商家 120 万，月均提问量 720 万。
+  \item 2023 年 9 月，与工程团队联合孵化了饿了么 B 端首个智能体产品，在行业内较早的探索了以端到端 Agent 助理替代传统 Chatbot 产品的可行性。至今已覆盖零售、品牌、城代、官代等业务线的 50+ 场景，月活商家 120 万，月均提问量 720 万。
 \end{itemize}
 \end{onehalfspacing}
 
 \vspace{0.3em}
-\textbf{核心贡献}
+{\small\textbf{核心贡献}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item \textbf{配合工程完成了 E-Agent 架构四次迭代}：全程牵头架构演进设计，架构重心逐步从 Workflow 设计转向 LLM 护栏：RAG $\rightarrow$ XAgent 多级嵌套 $\rightarrow$ ReAct 快慢并行 $\rightarrow$ Skill 外包架构，同步主导算法基建全栈开发（意图分类、多模态知识库、检索机制、长短期记忆、全链路推荐），并配合工程团队沉淀 E-Agent 行业解决方案，支撑业务规模化扩展。
+  \item \textbf{配合工程完成了 E-Agent 架构四次迭代}：全程参与了架构演进设计，逐步实现了 agent 架构工作重心从 Workflow 设计转向 LLM 护栏定义：RAG $\rightarrow$ XAgent 多级嵌套 $\rightarrow$ ReAct 快慢并行 $\rightarrow$ Skill 外包，并主导了相关算法基建工作（例如，意图分类、多模态知识库、检索机制、长短期记忆、全链路推荐……），并和工程同学一起沉淀出 E-Agent 行业解决方案，支撑了业务的规模化扩展。
   \item \textbf{设计并主导 IRAgent 开发}：将 Rewrite + RAG 模式升级为 RAG-Fusion 模式，采用 Dense + Sparse + Multi-vector 多路召回，区分 QA-Chunk / Doc-Chunk 双路并行，经 RRF 统一排序后注入 LLM 完成 Answer Summary；测评集召回有效率从 68.35\% 提升至 89.43\%（+21.08pt）。
-  \item \textbf{设计并落地全链路问题推荐系统}：以 QA 知识库原始 Query 与 BERTopic Pipeline 聚合的代表问构建动态推荐池，基于 30 / 7 / 1 天多时间窗口流行度权重，适配事前 / 事中 / 事后差异化推荐场景。
+  \item \textbf{设计并落地全链路问题推荐系统}：用“QA 知识库原始 Query” 和 “BERTopic Pipeline 聚合的线上代表问”构建了动态推荐池，采用了 30 / 7 / 1 天多时间窗口的流行度权重，去适配事前 / 事中 / 事后的差异化推荐需求。
 \end{itemize}
 \end{onehalfspacing}
 \end{graybox}
@@ -133,30 +131,32 @@
 \datedline{\role{淘天集团-客户满意中心-智能研发-人机协同}{高级应用算法专家} {\small\textcolor{gray}{带XP工作台小组3-5人}}}{2020年3月 -- 2023年7月}
 
 \vspace{0.5em}
-{\large\textbf{智能XP工作台专项}}\ {\small\textcolor{gray}{\hfill 202202-202307,\ 算法负责人}}
+\noindent{\color{gray!40}\rule{\textwidth}{0.2pt}}
+
+\textbf{智能XP工作台专项}\ {\small\textcolor{gray}{\hfill 202202-202307,\ 算法负责人}}
 
 \vspace{0.3em}
-\textit{基于LLM的工作台算法能力升级探索}
+{\small\textbf{基于LLM的工作台算法能力升级探索}}
 \begin{onehalfspacing}
 \begin{itemize}
   \item 参与手淘团队合作共建通用大模型，客满提供客服领域数据+标注通用域数据，基于 AOP 平台实现领域 SFT。落地场景包括：小蜜 FAQ 问答、自营小蜜商品售前问答、客满技术质检 NLU 场景、客服工作台对话引导
   \item 主导质检 NLU 问题增强的领域测评（ChatGLM-6B + SFT）：在标准模糊的复杂语义场景（如服务推诿）中表现优于传统 PLM；在小蜜大促FAQ/商知问答场景，通过检索增强+外部知识 Prompt 引入，利用大模型语义理解生成高质量回复
-  \item 参与基于 ChatGLM-6B 在2w条客服域数据上的 continue-train，已具备基于 context、会员进线状态的对话理解和回复能力
+  \item 在2w条域内客服域数据上对ChatGLM-6B做 CT，实现了模型基于 context和会员进线状态的去理解问题、回复特定话术的定制效果。
 \end{itemize}
 \end{onehalfspacing}
 
 \vspace{0.3em}
-\textit{智能质检}
+{\small\textbf{智能质检}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 整合CCO全部"服务一致性"质检算法，主导服务态度、问题定位、问题解决3部分的原离线算法改造为事中干预，实现实时拦截与智能化辅助能力提升
-  \item 主推"智能升级"和"转离完结自动化"两套辅助能力。其中"智能升级"通过算法识别高风险场景，自动生成升级工单；"转离完结自动化"通过算法识别承诺并创建待办，监督履约情况
-  \item "智能升级"项目针对0/1分布失衡的小样本学习场景，采用 RoBERTa Distiller+soft-label 混合模式，覆盖8个二三级风险场景，单场景打标仅需200-500条；"转离完结自动化"部分通过 ELECTRA fine-tune+DualCL 算法增强承诺句特征表达差异（Precision 0.93），并尝试 PET 算法提升场景覆盖（5场景平均准确率0.83）
+  \item 整合CCO全部“服务一致性”质检算法，主导服务态度、问题定位、问题解决3部分的原离线算法改造为事中干预，实现实时拦截与智能化辅助能力提升。
+  \item 主推“智能升级”和“转离完结自动化”两套辅助能力。其中“智能升级”通过算法识别高风险场景，自动生成升级工单；“转离完结自动化”通过算法识别承诺并创建待办，监督履约情况。
+  \item “智能升级”项目针对0/1分布失衡的小样本学习场景，采用 RoBERTa Distiller+soft-label 混合模式，覆盖8个二三级风险场景，单场景打标仅需200-500条；“转离完结自动化”部分通过 ELECTRA fine-tune+DualCL 算法增强承诺句特征表达差异（Precision 0.93），并尝试 PET 算法提升场景覆盖（5场景平均准确率0.83）。
 \end{itemize}
 \end{onehalfspacing}
 
 \vspace{0.3em}
-{\large\textbf{主动服务专项}}\ {\small\textcolor{gray}{\hfill 202103-202201,\ 算法负责人}}
+\textbf{主动服务专项}\ {\small\textcolor{gray}{\hfill 202103-202201,\ 算法负责人}}
 \begin{onehalfspacing}
 \begin{itemize}
   \item 建立分人群、分场域的服务卡点识别能力；通过服务权益的uplift预测和流失预警，匹配补偿动作；最终通过\textbf{智能触达机器人（Agent）}实现有心智的主动服务触达
@@ -176,19 +176,21 @@
 \datedline{\role{苏宁金融科技事业部-智能营销产品中心-算法研发部}{经理} {\small\textcolor{gray}{带南京10人，上海3人}}}{2016年7月 -- 2021年2月}
 
 \vspace{0.5em}
-{\large\textbf{智能营销产品中心}}\ {\small\textcolor{gray}{\\hfill201901-202307,\ 经理}}
+\noindent{\color{gray!40}\rule{\textwidth}{0.2pt}}
+
+\textbf{智能营销产品中心}\ {\small\textcolor{gray}{\hfill 201901-202102,\ 经理}}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item \textbf{CRM自动行业画像实时计算功能开发}：基于 Spark Streaming 开发用户画像实时分析模块，结合 Randomized Lasso 特征筛选，提供通用分析能力对外输出
+  \item \textbf{CRM自动行业画像实时计算功能开发}：基于 Spark Streaming 开发用户画像实时分析模块，结合 Randomized Lasso 特征筛选，提供通用分析能力对外输出。
   
-  \item \textbf{首页理财活动CTR预测}：多渠道特征融合的推荐算法，利用 PCA 降维+稠密化处理，完成基于 GBDT+LR 的二分类预测模型
+  \item \textbf{首页理财活动CTR预测}：多渠道特征融合的推荐算法，利用 PCA 降维+稠密化处理，完成基于 GBDT+LR 的二分类预测模型。
   
-  \item \textbf{苏宁金融“营销分”体系建设}：基于 XGBoost/LightGBM 自动化模型训练，通过 Platt Scaling 实现多模型融合校准，完成客群全覆盖
+  \item \textbf{苏宁金融“营销分”体系建设}：基于 XGBoost/LightGBM 自动化模型训练，通过 Platt Scaling 实现多模型融合校准，完成客群全覆盖。
 \end{itemize}
 \end{onehalfspacing}
 
 \vspace{0.3em}
-{\large\textbf{智能客服项目组}}\ {\small\textcolor{gray}{\hfill 201901-202006,\ 算法专家}}
+\textbf{智能客服项目组}\ {\small\textcolor{gray}{\hfill 201901-202006,\ 算法专家}}
 \begin{onehalfspacing}
 \begin{itemize}
   \item \textbf{客服机器人开发}：负责框架设计、意图识别（对比 fastText/CNN/BiLSTM，最终采用 fastText，macro precision 87.5\%）、相似问匹配（WMD+Levenshtein 距离），完成镜像打包商业输出
@@ -202,7 +204,7 @@
 \end{onehalfspacing}
 
 \vspace{0.3em}
-{\large\textbf{智能投顾项目组}}\ {\small\textcolor{gray}{\hfill 201607-201812,\ 算法高级工程师}}
+\textbf{智能投顾项目组}\ {\small\textcolor{gray}{\hfill 201607-201812,\ 算法高级工程师}}
 \begin{onehalfspacing}
 \begin{itemize}
   \item \textbf{“苏宁智投”产品的底层算法开发}：合作开发"苏宁智投"产品，负责基金风险收益计算、基金池筛选及资产归类模块；协作完成基于遗传算法的均值-方差最优化计算模块（年化收益率 7.19-19.84\%）
